@@ -1,21 +1,22 @@
 @use "../util/" as u;
 
 .feature_card {
-  // width: 300px;
-  // height: 220px;
-  // border: 1px solid red;
+  width: 100%;
   margin: u.em(12);
-  max-height: 500px;
   padding-inline: clamp(0.875rem, 0.633rem + 1.033vi, 1.563rem);
   padding-block: clamp(1.25rem, 0.81rem + 1.878vi, 2.5rem);
   background-color: #fff;
-  border-radius: u.em(20);
+  border-radius: u.em(10);
   display: flex;
   flex-direction: column;
   box-shadow: 0 26px 20px rgb(17 24 39 / 15%);
   transition: box-shadow 200ms ease;
-  border-top-width: u.em(4);
+  border-top-width: u.em(2);
   border-top-style: solid;
+
+  @media (width >= u.em(768)) {
+    width: u.em(280);
+  }
 
   &:hover {
     box-shadow: 5px 60px 20px rgb(17 24 39 / 22%);
@@ -32,7 +33,7 @@
   }
 
   &__description {
-    font-size: clamp(1rem, 0.912rem + 0.376vi, 1.25rem);
+    font-size: clamp(0.75rem, 0.574rem + 0.751vi, 1.25rem); // 12px - 20px
   }
 
   &.supervisor {

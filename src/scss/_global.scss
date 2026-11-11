@@ -33,25 +33,23 @@ header {
     font-weight: var(--fw-regular);
   }
 
-  @media (width >= u.em(768)) {
-    padding-inline: u.em(24);
-  }
+  padding-inline: u.em(10);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  place-content: center center;
+
   padding-top: u.em(40);
 
-  // border: 1px solid blue;
-
-  // align-items: center;
+  padding-inline: u.em(20);
 
   @media (width >= u.em(768)) {
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding-inline: u.em(24);
+
+    padding-inline: u.em(10);
   }
 }
 
@@ -65,8 +63,3 @@ main {
 .title-bold {
   font-weight: var(--fw-bold);
 }
-
-// .supervisor,
-// .calculator {
-//   align-self: center;
-// }
