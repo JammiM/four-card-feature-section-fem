@@ -29,7 +29,12 @@ header {
   margin-block-start: clamp(2.5rem, 1.18rem + 5.634vi, 6.25rem);
 
   p {
-    font-size: clamp(1rem, 0.912rem + 0.376vi, 1.25rem);
+    font-size: clamp(0.75rem, 0.574rem + 0.751vi, 1.25rem); // 12px - 20px
+    font-weight: var(--fw-regular);
+  }
+
+  @media (width >= u.em(768)) {
+    padding-inline: u.em(24);
   }
 }
 
@@ -46,14 +51,15 @@ main {
   @media (width >= u.em(768)) {
     flex-direction: row;
     align-items: center;
-
-    // height: 90%;
+    padding-inline: u.em(24);
   }
 }
 
 .title {
   font-weight: var(--fw-light);
-  font-size: clamp(1.25rem, 0.59rem + 2.817vi, 3.125rem);
+  line-height: 1.1;
+  font-size: clamp(1.563rem, 1.012rem + 2.347vi, 3.125rem); // 25px - 50px
+  margin-block-end: clamp(0.688rem, 0.489rem + 0.845vi, 1.25rem); // 10px - 20px
 }
 
 .title-bold {
