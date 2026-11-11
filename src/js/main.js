@@ -1,4 +1,4 @@
-import "../css/style.css";
+import "../scss/style.scss";
 import heroImg from "../assets/hero.png";
 import javascriptLogo from "../assets/javascript.svg";
 import viteLogo from "../assets/vite.svg";

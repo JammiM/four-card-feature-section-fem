@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint-css": "npx stylelint '**/*.css'",
-    "lint-css-fix": "npx stylelint '**/*.css' --fix",
+    "lint-css": "npx stylelint '**/*.scss'",
+    "lint-css-fix": "npx stylelint '**/*.scss' --fix",
     "eslint": "npx eslint '**/*.js'"
   },
   "devDependencies": {
