@@ -1,1 +1,7 @@
 @use "../util/" as u;
+
+.feature_card {
+  outline: 1px solid gray;
+  margin: 20px;
+  padding: 20px;
+}

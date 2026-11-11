@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Four card feature section" />
 
+    <meta
+      name="theme-color"
+      content="#fafafa"
+      media="(prefers-color-scheme: light)"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,8 +35,16 @@
     </header>
     <main>
       <div class="feature_card">
-        <h2>Supervisor</h2>
-        <p>Monitors activity to identify project roadblocks</p>
+        <h2 class="feature_card__heading">Supervisor</h2>
+        <p class="feature_card__description">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img
+          class="feature_card__image"
+          src="./src/assets/images/icon-supervisor.svg"
+          alt=""
+          srcset=""
+        />
       </div>
 
       <div class="feature_card">
@@ -38,16 +52,40 @@
         <p>
           Scans our talent network to create the optimal team for your project
         </p>
+        <img
+          class="feature_card__image"
+          src="./src/assets/images/icon-team-builder.svg"
+          alt=""
+          srcset=""
+          width="64"
+          height="64"
+        />
       </div>
 
       <div class="feature_card">
         <h2>Karma</h2>
         <p>Regularly evaluates our talent to ensure quality</p>
+        <img
+          class="feature_card__image"
+          src="./src/assets/images/icon-karma.svg"
+          alt=""
+          srcset=""
+          width="64"
+          height="64"
+        />
       </div>
 
       <div class="feature_card">
         <h2>Calculator</h2>
         <p>Uses data from past projects to provide better delivery estimates</p>
+        <img
+          class="feature_card__image"
+          src="./src/assets/images/icon-calculator.svg"
+          alt=""
+          srcset=""
+          width="64"
+          height="64"
+        />
       </div>
     </main>
     <div id="app"></div>

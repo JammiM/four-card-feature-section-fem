@@ -18,10 +18,15 @@ body {
   background-color: #fafafa;
   font-family: "Poppins", sans-serif;
   color: var(--c-grey-500);
+  height: 100dvh;
 }
 
 p {
   font-weight: var(--fw-regular);
+}
+
+header {
+  text-align: center;
 }
 
 .title {
