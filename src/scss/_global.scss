@@ -1,0 +1,32 @@
+@use "./util" as u;
+
+:root {
+  --c-red: hsl(0, 78%, 62%);
+  --c-cyan: hsl(180, 62%, 55%);
+  --c-orange: hsl(34, 97%, 64%);
+  --c-blue: hsl(212, 86%, 64%);
+  --c-grey-500: hsl(234, 12%, 34%);
+  --c-grey-400: hsl(212, 6%, 44%);
+  --c-white: hsl(0, 0%, 100%);
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  color: var(--c-grey-500);
+}
+
+p {
+  font-weight: var(--fw-regular);
+}
+
+.title {
+  font-weight: var(--fw-light);
+}
+.title-bold {
+  font-weight: var(--fw-bold);
+}
