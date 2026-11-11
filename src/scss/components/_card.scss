@@ -14,6 +14,8 @@
   flex-direction: column;
   box-shadow: 0 26px 20px rgb(17 24 39 / 15%);
   transition: box-shadow 200ms ease;
+  border-top-width: u.em(4);
+  border-top-style: solid;
 
   &:hover {
     box-shadow: 5px 60px 20px rgb(17 24 39 / 22%);
@@ -34,19 +36,19 @@
   }
 
   &.supervisor {
-    border-top: u.em(4) solid var(--c-cyan);
+    border-color: var(--c-cyan);
   }
 
   &.builder {
-    border-top: u.em(4) solid var(--c-red);
+    border-color: var(--c-red);
   }
 
   &.karma {
-    border-top: u.em(4) solid var(--c-orange);
+    border-color: var(--c-orange);
   }
 
   &.calculator {
-    border-top: u.em(4) solid var(--c-blue);
+    border-color: var(--c-blue);
   }
 }
 
