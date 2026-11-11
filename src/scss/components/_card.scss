@@ -1,7 +1,42 @@
 @use "../util/" as u;
 
 .feature_card {
-  outline: 1px solid gray;
-  margin: 20px;
-  padding: 20px;
+  // width: 300px;
+  // height: 220px;
+  margin: u.em(20);
+
+  padding-inline: clamp(0.875rem, 0.633rem + 1.033vi, 1.563rem);
+  padding-block: clamp(1.25rem, 0.81rem + 1.878vi, 2.5rem);
+
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  .feature_card__heading {
+    font-size: clamp(1.25rem, 1.03rem + 0.939vi, 1.875rem);
+  }
+
+  .feature_card__description {
+    font-size: clamp(1rem, 0.912rem + 0.376vi, 1.25rem);
+  }
+
+  &.supervisor {
+    border-top: 2px solid var(--c-cyan);
+  }
+
+  &.builder {
+    border-top: 2px solid var(--c-red);
+  }
+
+  &.karma {
+    border-top: 2px solid var(--c-orange);
+  }
+
+  &.calculator {
+    border-top: 2px solid var(--c-blue);
+  }
+}
+
+.feature_card__image {
+  align-self: flex-end;
 }

@@ -1,14 +1,13 @@
 @use "./util" as u;
 
 :root {
-  --c-red: hsl(0, 78%, 62%);
-  --c-cyan: hsl(180, 62%, 55%);
-  --c-orange: hsl(34, 97%, 64%);
-  --c-blue: hsl(212, 86%, 64%);
-  --c-grey-500: hsl(234, 12%, 34%);
-  --c-grey-400: hsl(212, 6%, 44%);
-  --c-white: hsl(0, 0%, 100%);
-
+  --c-red: hsl(0deg 78% 62%);
+  --c-cyan: hsl(180deg 62% 55%);
+  --c-orange: hsl(34deg 97% 64%);
+  --c-blue: hsl(212deg 86% 64%);
+  --c-grey-500: hsl(234deg 12% 34%);
+  --c-grey-400: hsl(212deg 6% 44%);
+  --c-white: hsl(0deg 0% 100%);
   --fw-light: 200;
   --fw-regular: 400;
   --fw-bold: 600;
@@ -16,7 +15,7 @@
 
 body {
   background-color: #fafafa;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   color: var(--c-grey-500);
   height: 100dvh;
 }
@@ -27,11 +26,35 @@ p {
 
 header {
   text-align: center;
+
+  margin-block-start: clamp(2.5rem, 1.18rem + 5.634vi, 6.25rem);
+
+  p {
+    font-size: clamp(1rem, 0.912rem + 0.376vi, 1.25rem);
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= u.em(768)) {
+    flex-direction: row;
+    height: 90%;
+  }
 }
 
 .title {
   font-weight: var(--fw-light);
+  // color: red;
+  font-size: clamp(2.5rem, 2.28rem + 0.939vi, 3.125rem);
 }
+
 .title-bold {
   font-weight: var(--fw-bold);
 }
+
+// .supervisor,
+// .calculator {
+//   align-self: center;
+// }
