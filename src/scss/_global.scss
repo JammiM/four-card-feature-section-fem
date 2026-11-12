@@ -39,16 +39,14 @@ header {
 main {
   display: flex;
   flex-direction: column;
-
   padding-top: u.em(40);
-
   padding-inline: u.em(20);
+  gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
 
   @media (width >= u.em(768)) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     padding-inline: u.em(10);
   }
 }
@@ -62,4 +60,25 @@ main {
 
 .title-bold {
   font-weight: var(--fw-bold);
+}
+
+.grid {
+  display: flex;
+  padding-inline: u.em(10);
+  flex: 1;
+
+  flex-direction: column;
+  justify-content: center;
+
+  &:nth-child(2) {
+    flex-direction: column;
+    gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
