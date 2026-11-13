@@ -1,5 +1,32 @@
 @use "./util" as u;
 
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/poppins-v24-latin-200.woff2") format("woff2");
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
+}
+
 :root {
   --c-red: hsl(0deg 78% 62%);
   --c-cyan: hsl(180deg 62% 55%);
@@ -7,7 +34,7 @@
   --c-blue: hsl(212deg 86% 64%);
   --c-grey-500: hsl(234deg 12% 34%);
   --c-grey-400: hsl(212deg 6% 44%);
-  --c-main-background: hsl(0, 0%, 98%);
+  --c-main-background: hsl(0deg 0% 98%);
   --c-white: hsl(0deg 0% 100%);
   --fw-light: 200;
   --fw-regular: 400;
