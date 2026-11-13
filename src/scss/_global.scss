@@ -7,6 +7,7 @@
   --c-blue: hsl(212deg 86% 64%);
   --c-grey-500: hsl(234deg 12% 34%);
   --c-grey-400: hsl(212deg 6% 44%);
+  --c-main-background: hsl(0, 0%, 98%);
   --c-white: hsl(0deg 0% 100%);
   --fw-light: 200;
   --fw-regular: 400;
@@ -14,7 +15,7 @@
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--c-main-background);
   font-family: Poppins, sans-serif;
   color: var(--c-grey-500);
   height: 100dvh;
@@ -39,7 +40,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  padding-top: u.em(40);
+  padding-block-start: u.em(40);
   padding-inline: u.em(20);
   gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
 
@@ -66,7 +67,6 @@ main {
   display: flex;
   padding-inline: u.em(10);
   flex: 1;
-
   flex-direction: column;
   justify-content: center;
 

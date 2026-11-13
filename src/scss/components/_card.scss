@@ -17,9 +17,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .card {
-      transition: none;
-    }
+    transition: none;
   }
 
   &__heading {
