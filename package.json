@@ -9,11 +9,13 @@
     "preview": "vite preview",
     "lint-css": "npx stylelint '**/*.scss'",
     "lint-css-fix": "npx stylelint '**/*.scss' --fix",
-    "eslint": "npx eslint '**/*.js'"
+    "eslint": "npx eslint '**/*.js'",
+    "html-lint": "npm exec html-validate index.html --fix"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.14.0",
+    "html-validate": "^11.4.0",
     "sass": "^1.108.2",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-scss": "^7.4.0",
