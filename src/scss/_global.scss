@@ -64,19 +64,16 @@ header {
   padding-inline: u.em(10);
 }
 
-main {
+.main {
   display: flex;
   flex-direction: column;
-  padding-block-start: u.em(40);
-  padding-inline: u.em(20);
-  gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
+  max-width: u.em(375);
+  margin: 0 auto;
+  gap: u.em(24);
 
-  @media (width >= u.em(768)) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-inline: u.em(10);
-  }
+  padding-block-start: u.em(40);
+  // padding-inline: u.em(20);
+  // gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
 }
 
 .title {
@@ -92,20 +89,38 @@ main {
 
 .grid {
   display: flex;
-  padding-inline: u.em(10);
-  flex: 1;
+  width: 100%;
+  gap: u.em(24);
   flex-direction: column;
-  justify-content: center;
-
-  &:nth-child(2) {
-    flex-direction: column;
-    gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
-  }
+  //     gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
 }
 
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
     transition: none;
+  }
+}
+
+@media (width >= u.em(1100)) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+    gap: u.em(30);
+    max-width: u.em(1100);
+  }
+
+  .main > .feature_card,
+  .grid {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .grid {
+    gap: u.em(30);
+  }
+
+  .feature_card {
+    min-height: u.em(250);
   }
 }
