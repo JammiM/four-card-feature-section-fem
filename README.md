@@ -29,7 +29,7 @@ Users should be able to:
 - Solution URL: [GitHub repo](https://github.com/JammiM/four-card-feature-section-fem)
 - Live Site URL: [live site](https://jammim.github.io/four-card-feature-section-fem/)
 
-## My process
+---
 
 ### Built with
 
@@ -38,6 +38,8 @@ Users should be able to:
 - Flexbox
 - SASS
 - Mobile-first workflow
+
+---
 
 ### Useful resources
 
@@ -49,3 +51,11 @@ flex: 1;
 ```
 
 property very useful for equal grid sizes.
+
+- [google-webfonts-helper](https://gwfh.mranftl.com/fonts) - Incredibly useful for using google fonts, with the woff2 format
+
+---
+
+## Acknowledgments
+
+Thanks to [Elmar Chavez](https://www.frontendmentor.io/profile/CodingWithJiro) for his amazing advice, on to improve my work, it's greatly appreciated
