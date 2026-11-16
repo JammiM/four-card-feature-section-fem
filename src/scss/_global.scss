@@ -39,9 +39,7 @@
   --fw-light: 200;
   --fw-regular: 400;
   --fw-bold: 600;
-
   --fs-main: 0.9375rem; // 15px
-
   --vp-max-rem-width: 69.375rem; // 1110px
   --vp-max-em-width: 68.75em; // 1110px
 }
@@ -88,6 +86,7 @@ body {
     100% - u.rem(48),
     var(--vp-max-width)
   ); /* 24px side breathing room, 24 x 2 = 48 , 1110px max */
+
   margin-inline: auto;
   padding-block: clamp(4.5rem, 6vw, 5rem);
 }
@@ -101,14 +100,14 @@ body {
   margin-inline: auto;
 
   /* Tablet */
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     inline-size: min(100%, 45.625rem);
   }
 }
 
 /* Desktop */
-@media (min-width: 68.75em) {
+@media (width >= 68.75em) {
   .grid {
     inline-size: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -123,12 +122,15 @@ body {
     .supervisor {
       grid-area: supervisor;
     }
+
     .builder {
       grid-area: builder;
     }
+
     .karma {
       grid-area: karma;
     }
+
     .calculator {
       grid-area: calculator;
     }
