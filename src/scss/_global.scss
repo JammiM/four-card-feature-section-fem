@@ -54,7 +54,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .header {
@@ -94,39 +93,51 @@ body {
 }
 
 .grid {
-  display: flex;
-  width: 100%;
-  gap: u.em(24);
-  flex-direction: column;
-  //     gap: clamp(1.563rem, 1.717rem + -0.657vi, 1.125rem); // 18px - 25px
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1.5rem;
+  inline-size: min(100%, 23.4375rem);
+  margin-inline: auto;
+
+  /* Tablet */
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    inline-size: min(100%, 45.625rem);
+  }
+}
+
+/* Desktop */
+@media (min-width: 68.75em) {
+  .grid {
+    inline-size: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.875rem;
+    grid-template-areas:
+      ".          builder ."
+      "supervisor builder calculator"
+      "supervisor karma   calculator"
+      ".          karma   .";
+
+    .supervisor {
+      grid-area: supervisor;
+    }
+    .builder {
+      grid-area: builder;
+    }
+    .karma {
+      grid-area: karma;
+    }
+    .calculator {
+      grid-area: calculator;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
     transition: none;
-  }
-}
-
-@media (width >= u.em(1100)) {
-  .main {
-    flex-direction: row;
-    align-items: center;
-    gap: u.em(30);
-    max-width: u.em(1100);
-  }
-
-  .main > .feature_card,
-  .grid {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .grid {
-    gap: u.em(30);
-  }
-
-  .feature_card {
-    min-height: u.em(250);
   }
 }
