@@ -1,6 +1,6 @@
 @use "../util/" as u;
 
-.feature_card {
+.feature-card {
   padding: clamp(1.75rem, 2vw + 1rem, 2rem);
   background-color: var(--c-white);
   border-radius: 8px;
