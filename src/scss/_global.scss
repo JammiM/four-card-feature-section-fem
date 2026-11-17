@@ -1,4 +1,5 @@
 @use "./util" as u;
+@use "./base/variables" as v;
 
 :root {
   --c-red: hsl(0deg 78% 62%);
@@ -13,12 +14,11 @@
   --fw-regular: 400;
   --fw-bold: 600;
   --fs-main: 0.9375rem; // 15px
-  --vp-max-rem-width: 69.375rem; // 1110px
-  --vp-max-em-width: 68.75em; // 1110px
 }
 
 body {
   background-color: var(--c-main-background);
+  font-family: v.$poppins-font;
   color: var(--c-grey-500);
   min-height: 100dvh;
   display: flex;
@@ -52,7 +52,7 @@ body {
 }
 
 /* Desktop */
-@media (width >= 68.75em) {
+@media (width >= v.$max-em-width) {
   .grid {
     inline-size: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
