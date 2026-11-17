@@ -17,13 +17,13 @@
 }
 
 body {
-  background-color: var(--c-main-background);
-  font-family: v.$poppins-font;
-  color: var(--c-grey-500);
-  min-height: 100dvh;
   display: flex;
+  min-height: 100dvh;
   align-items: center;
   justify-content: center;
+  background-color: var(--c-main-background);
+  color: var(--c-grey-500);
+  font-family: v.$poppins-font;
 }
 
 .main {
